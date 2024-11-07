@@ -35,7 +35,6 @@ O projeto estará organizado com o padrão MVC (Model, View e Controller) onde n
 
 Os autores são os respnsáveis e participantes do projeto, no projeto mais recente, desenvolvido com PHP, somos 4 estudantes de sistemas de informação e análise e desenvolvimento de sistemas no 4° semestre pelo UniProjeção Taguantinga Norte.
 
-<<<<<<< HEAD
 
 <details>
   <summary>
@@ -63,11 +62,3 @@ Os autores são os respnsáveis e participantes do projeto, no projeto mais rece
   </summary>
 </details>
   
-=======
-- [Thiago Silva](https://github.com/CrowvenTh)
-- [Roney Vila](https://github.com/akirar0n)
-- [Yago](https://github.com/Yago-LDT)
-- [Bryan](https://github.com/Bryanjvo)
-
---- 
->>>>>>> b8402566b68e39ee985d58065d30f14c688707be
