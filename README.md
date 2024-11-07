@@ -28,6 +28,6 @@ Os autores são os respnsáveis e participantes do projeto, no projeto mais rece
 - [Thiago Silva](https://github.com/CrowvenTh)
 - [Roney Vila](https://github.com/akirar0n)
 - [Yago](https://github.com/Yago-LDT)
-- Bryan 
+- [Bryan](https://github.com/Bryanjvo)
 
 --- 
