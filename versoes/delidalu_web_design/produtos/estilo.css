@@ -1,0 +1,46 @@
+.parag{
+    text-align: justify;
+    color: #45322e;
+    flex-wrap: wrap;
+    flex-basis: calc(25% - 20px);
+	margin-bottom: 30px;
+    justify-content: space-between;
+}
+.choc{
+    align-items: calc(25%-1500px);
+    flex-wrap: wrap;
+    flex-basis: calc(25% - 20px);
+	margin-bottom: 30px;
+    justify-content: space-between;
+}
+.align{
+    overflow: auto; /* Para limpar o float */
+  }
+  
+  .div1, .div2 {
+    width: 50%; /* Define a largura desejada para cada div */
+    float: left; /* Flutua as divs para a esquerda */
+  }
+  .price{
+    color: green;
+  }
+  .btn{
+ 
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #f148;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 4px; 
+ }
+.st{
+  color: #fff;
+  text-align: center;
+}
+.ts{
+  background-color: #fff;
+  text-align: justify;
+  padding: 20px 20px;
+  align-items: center;
+  width: 60%;
+}

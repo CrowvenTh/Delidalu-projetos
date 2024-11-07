@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+* {
+    font-family: 'Inter','sans-serif';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+	background-color: #fae4e8;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: #554c4d;
+	font-family: Courier, monospace;
+	font-weight: bold;
+}
+
+li {
+	float: left;
+}
+
+li a.active {
+	background-color: #afa5aa;
+}
+
+li a, .dropbtn {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+	background-color: #777071;
+}
+
+li.dropdown {
+	display: inline-block;
+}
+
+.dropdown-products {
+	display: none;
+	position: absolute;
+	background-color: #777071;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-products a {
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-products a:hover {
+	background-color: #ae8496;
+}
+
+.dropdown:hover .dropdown-products {
+	display: block;
+}
+
+.p {
+	font-family: Courier, monospace;
+	color: #fff;
+	font-size: 70px;
+	text-align: center;
+	text-shadow: 1px 1px 2px #000000, 0 0 4px #554c4d;
+}
+
+.card1 {
+	background-color: white;
+	border-radius: 8px;
+	width: 500px;
+	margin: 40px 300px;
+	text-align: center;
+	justify-content: left;
+}
+
+/* contato */
+
+.contato{
+    width: 60%;
+    height: 30%;
+    display: flex;
+    margin: 0 auto;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 212);
+}
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #a997a0;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+.input-caixa input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px #a997a0;
+}
+.input-caixa input:hover{
+    background-color: #dcd2d9;
+}
+.input-caixa input:focus-visible{
+    outline: 1px solid #afa5aa;
+}
+.input-caixa label,
+.gender-title h6{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+.input-caixa input::placeholder{
+    color: #000000be;
+}
+.continue-button input{
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #afa5aa;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+.continue-button input:hover{
+    background-color: #a997a0;
+}
+.continue-button input a{
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+.input-caixa textarea{
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #fff;
+    padding: 0.62rem;
+    border-radius: 5px;
+    color: #554c4d;
+    margin: 0.6rem 0;
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px #a997a0;
+    flex-wrap: wrap;
+}
+
+.zapinsta {
+	top: 450px;
+	left: 1500px;
+	width: 120px;
+	height: 50px; 
+	position: fixed;
+	margin: 30px 30px;
+	float: right;
+	cursor: pointer;
+	display: flex;
+}
+
+/*rodapé*/
+
+.rodape{
+    background-color: #554c4d;
+    color: white;
+    height: auto;
+    width: 100%;
+    font-size: 14px;
+    font-family: helvetica;
+}
+.rodape a{
+    text-decoration: none;
+    color: white;
+}
+.rodape p{
+    margin-bottom: 5px;
+}
+.rodape-div{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin: auto;
+    align-items: stretch;
+    padding: 60px 10px 40px 10px;
+}
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+    display: flex;
+    width: calc(100% / 4 - 20px);
+    padding: 10px;
+}
+.rodape span{
+    font-size: 20px;
+    color: white;
+}
+.rodape-autores{
+    width: calc(100% - 20px);
+    background-color: black;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+
+

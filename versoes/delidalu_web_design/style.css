@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+* {
+	font-family: 'Inter','sans-serif';
+}
+
+body {
+	background-color: #fae4e8;
+}
+
+ul {
+	list-style-type: none;
+	width: 99%;
+	position: fixed;
+	z-index: 10;
+	margin: 0;
+	padding: 0;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: #554c4d;
+	font-family: Courier, monospace;
+	font-weight: bold;
+}
+
+li {
+	float: left;
+}
+
+li a.active {
+	background-color: #afa5aa;
+}
+
+li a, .dropbtn {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+	background-color: #777071;
+}
+
+li.dropdown {
+	display: inline-block;
+}
+
+.dropdown-products {
+	display: none;
+	position: absolute;
+	background-color: #777071;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-products a {
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-products a:hover {
+	background-color: #ae8496;
+}
+
+.dropdown:hover .dropdown-products {
+	display: block;
+}
+
+.p {
+	font-family: Courier, monospace;
+	color: #fff;
+	font-size: 70px;
+	text-align: center;
+	text-shadow: 1px 1px 2px #000000, 0 0 4px #554c4d;
+}
+
+.card1 {
+	background-color: white;
+	border-radius: 8px;
+	width: 500px;
+	margin: 40px 300px;
+	text-align: center;
+	justify-content: left;
+}
+
+h1 {
+	font-family: Courier, monospace;
+	color: white;
+	font-size: 40px;
+	text-shadow: 1px 1px 2px black, 0 0 10px black, 0 0 5px darkblue;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=username] {
+	font-family: Courier, monospace;
+	font-weight: bold;
+	width: 50%;
+	padding: 10px 18px;
+	margin: 8px 8px;
+	border-radius: 8px;
+}
+
+input[type=submit] {
+	font-family: Courier, monospace;
+	font-weight: bold;
+	width: 30%;
+	border: none;
+	color: white;
+	background-color: #554c4d;
+	padding: 8px 16px;
+	border-radius: 8px;
+	cursor: pointer;
+	margin: 4px 2px;
+}
+
+form label {
+	font-family: Courier, monospace;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#submit:hover {
+	background-color: #777071;
+	color: #fff
+}
+
+.carrossel {
+	display: flex;
+	box-shadow: 1px 1px 2px #ab9094, 0 0 10px #554c4d;
+	overflow: hidden; 
+	height: 500px;
+	width: 500px;
+	position: relative;
+    margin-left: 290px;
+    margin-right: auto;
+}
+
+.container {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	transform: translateX(0);
+}
+
+img {
+	object-fit: cover;
+	height: 500px;
+	width: 500px;
+}
+
+.container2 {
+	font-family: Courier, monospace;
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	text-shadow: 1px 1px 2px #000000, 0 0 2px #554c4d;
+	margin-right:250px;
+	margin-left: 900px;
+}
+
+.zapinsta {
+	top: 800px;
+	left: 1500px;
+	width: 120px;
+	height: 50px; 
+	position: fixed;
+	margin: 30px 30px;
+	float: right;
+	cursor: pointer;
+	display: flex;
+}
+		
+/*rodapé*/
+
+.rodape{
+    background-color: #554c4d;
+	margin-top: 60px;
+	position: relative;
+	z-index: 9;
+    color: white;
+    height: auto;
+    width: 100%;
+    font-size: 14px;
+    font-family: helvetica;
+}
+.rodape a{
+    text-decoration: none;
+    color: white;
+}
+.rodape p{
+    margin-bottom: 5px;
+}
+.rodape-div{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin: auto;
+    align-items: stretch;
+    padding: 60px 10px 40px 10px;
+}
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+    display: flex;
+    width: calc(100% / 4 - 20px);
+    padding: 10px;
+}
+.rodape span{
+    font-size: 20px;
+    color: white;
+}
+.rodape-autores{
+    width: calc(100% - 20px);
+    background-color: black;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+/*Produtos*/
+.main_prod{
+    max-width: calc(1300px - 40px);
+    padding:0 20px;
+    margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.main_prod article{
+	flex-basis: calc(25% - 20px);
+	margin-bottom: 30px;
+	opacity: 0.7;
+}
+
+.main_prod article:hover{
+ opacity:2;
+}
+
+.main_prod article img{
+    width: 100%;
+}
+
+.main_prod article h2 a{
+    color:#ad2263;
+}
+/*Produtos*/

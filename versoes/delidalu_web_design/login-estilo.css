@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+* {
+    font-family: 'Inter','sans-serif';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+.Lconteiner{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 212);
+    background-color: #ffc3d3;
+}
+.Lform-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    padding: 1rem;
+}
+
+.Lform-image img{
+    width: 31rem;
+}
+ 
+/*formulário*/
+
+.form{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 3rem;
+}
+.form-header{
+    margin-bottom: 3rem;   
+    display: flex;
+    justify-content: space-between;
+}
+.login-button{
+    display: flex;
+    align-items: center;
+}
+.login-button button{
+    border: none;
+    background-color: #afa5aa;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-button button:hover{
+    background-color: #afa5aaa1;
+}
+.login-button button a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #a997a0;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+.input-grupo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.input-caixa{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+.input-caixa input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px #a997a0;
+}
+.input-caixa input:hover{
+    background-color: #dcd2d9;
+}
+.input-caixa input:focus-visible{
+    outline: 1px solid #afa5aa;
+}
+.input-caixa label,
+.gender-title h6{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+.input-caixa input::placeholder{
+    color: #000000be;
+}
+.gender-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0.5rem;
+}
+.gender-input{
+    display: flex;
+    align-items: center;
+}
+.gender-input input{
+    margin-right: 0.35rem;
+}
+.gender-input label{
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+.continue-button input{
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #afa5aa;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+.continue-button input:hover{
+    background-color: #a997a0;
+}
+.continue-button input a{
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
