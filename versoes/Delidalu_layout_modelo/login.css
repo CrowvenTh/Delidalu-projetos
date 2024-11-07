@@ -1,0 +1,50 @@
+header {
+    background-color: #3B2D28;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #3B2D28;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+nav {
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: aliceblue;
+}
+
+nav a:hover {
+    background-color: #fce0ec;
+    color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2CED8;
+    color: aliceblue;
+}
+
+.containerLogin {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #3B2D28;
+    background-color: #F2CED8;
+
+}
+label{
+    
+}
