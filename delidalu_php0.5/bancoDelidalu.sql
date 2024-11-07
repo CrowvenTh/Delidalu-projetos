@@ -3,7 +3,14 @@
 create schema if not exists delidalu default character set utf8;
 use delidalu;
 
-create table if not exists cliente (id int not null primary key auto_increment, nome varchar(50), cpf varchar(15), endereco varchar(100), email varchar(50), telefone varchar(15));
+create table if not exists cliente (
+	id int not null primary key auto_increment, 
+	nome varchar(50), 
+    cpf varchar(15), 
+    endereco varchar(100), 
+    email varchar(50), 
+    telefone varchar(15),
+	senha varchar(255));
 
 create table if not exists estoque (id int not null primary key auto_increment, nome varchar(50), tipo varchar(50), quantidade int, preco double);
 
@@ -59,4 +66,6 @@ set new.totalpedido = (preco_calc * new.quantidadepedido);
 END //
 
 DELIMITER ;
+
+
 
