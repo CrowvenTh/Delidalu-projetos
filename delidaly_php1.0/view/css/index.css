@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D9B6C6;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #655D5D;
+    color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #655D5D;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #99858A;
+    color: #ffffff;
+}
+
+a {
+    color: #655D5D;
+}
+
+main {
+    flex-grow: 1;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.produtos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.produto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.aboutus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2px;
+    text-align: justify;
+    width: 850px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #655D5D;
+    color: white;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer h3 {
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+footer p {
+    margin: 5px 0;
+    text-align: center;
+}
