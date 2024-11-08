@@ -1,0 +1,11 @@
+-Juntei ControleCadastro.php e ControleLogin.php em só um arquivo: ControleCliente.php. Dessa forma não vamos precisar criar arquivos para cada função. Tudo fica num lugar só, e até simplifica a questão de referenciar esses arquivos em outros lugares.
+
+-Criei os gets e sets e desenvolvi a função para cadastrar um pedido.
+
+-Mudei index.html para index.php. Tinha um código de iniciar sessão em PHP no começo do código, então achei necessário.
+
+- Nova imagem do modelo do Banco de Dados.
+
+- O formulário do pedido não pede a data do pedido nem o total do pedido porque o total é calculado no banco de dados e a data é inserida automaticamente como a data atual. 
+
+-Nas functions de ClassCliente.php, criei get e set separado para id. Todas as tabelas tem só 'id' como chave primária. idcliente, idestoque e etc são apenas para receber valores para foreign key.
