@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delidalu</title>
     <link rel="stylesheet" href="view/css/index.css">
-    <link rel="icon" type="image/x-icon" href="design">
+    <link rel="icon" type="image/x-icon" href="view/design_&_layout/logotipo/delidalucon.png">
 </head>
 
 <body>
