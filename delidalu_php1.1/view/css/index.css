@@ -114,6 +114,10 @@ footer p {
     color: white; 
     text-decoration: none;
 }
+.autoresImg{
+    width: 15px;
+    height: 15px;
+}
 
 /* ====================================== */
 /* ================Produtos============== */
