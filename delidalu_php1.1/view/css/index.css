@@ -63,26 +63,6 @@ section {
     text-align: center;
 }
 
-.produtos-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.produto {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin: 10px;
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-}
-
-.produto img {
-    max-width: 100%;
-    height: auto;
-}
-
 .aboutus {
     display: flex;
     flex-direction: column;
@@ -129,6 +109,10 @@ footer h3 {
 footer p {
     margin: 5px 0;
     text-align: center;
+}
+.autores, a{
+    color: white; 
+    text-decoration: none;
 }
 
 /* ====================================== */
