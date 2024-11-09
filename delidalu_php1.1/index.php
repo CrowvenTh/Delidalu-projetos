@@ -18,7 +18,7 @@ session_start();
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="controler/produtos.php">Produtos</a></li>
+                <li><a href="view/Produto.php">Produtos</a></li>
                 <li><a href="view/Login.php">Login</a></li>
                 <li><a href="view/CadCliente.php">Cadastro</a></li>
             </ul>
