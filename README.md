@@ -26,7 +26,9 @@ Este projeto será construido utilizando PHP, SQL, HTML e CSS.
     2 No XAMPP, abra a pasta explorar á direita da aplicação;
     3 Ao abrir o explorer selecione s a pasta htdocs;
     4 Extraia o arquivo do projeto dentro da pasta htocs;
-    5 No navegador, digite "localhost/" e complete com a pasta onde se localiza o projeto
+    5 Inicie as portas do Apache e o MySQL no XAMPP;
+    6 No navegador, digite "localhost/" e complete com a pasta onde se localiza o projeto
+    
 
 ### Composição
 O projeto estará organizado com o padrão MVC (Model, View e Controller) onde na pasta **Model** localizarão-se as referências e integrações com o banco de dados, na pasta **View** encontrarão-se os arquivoes que compõem os detalhes visuais quanto ao sistema e , por fim, na pasta **controller** estarão as regras de negócio do sistema e suas respectivas funcionalidades.
