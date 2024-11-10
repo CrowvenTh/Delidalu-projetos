@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D9B6C6;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #655D5D;
+    color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #655D5D;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #99858A;
+    color: #ffffff;
+}
+
+a {
+    color: #655D5D;
+}
+
+main {
+    flex-grow: 1;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.aboutus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2px;
+    text-align: justify;
+    width: 850px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #655D5D;
+    color: white;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer h3 {
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+footer p {
+    margin: 5px 0;
+    text-align: center;
+}
+.autores, a{
+    color: white; 
+    text-decoration: none;
+}
+.autoresImg{
+    width: 15px;
+    height: 15px;
+}
+
+/* ====================================== */
+/* ================Produtos============== */
+/* ====================================== */
+
+.grid {
+    display: grid;
+}
+
+/* O repeat vai repetir o número de colunas */
+.grid-template-columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+Auto-fit vai calcular automaticamente o total de colunas
+.grid-template-columns-5 {
+    grid-template-columns: repeat(auto-fit, 100px);
+}
+
+Com o auto-fit realmente é criado um layout responsivo
+.grid-template-columns-6 {
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+}
+
+.item {
+    margin: 5.5px;
+    background: #99858A;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 4.5px;
+}
+
+.imgProduto{
+    width: 250px;
+    height: 210px;
+    padding: 20px;
+    border-radius: 2rem;
+}
+
+.grid {
+    border-radius: 4.5px;
+    max-width: 1250px;
+    margin: 0 auto;
+    /* border: 1px solid #ccc; */
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #655D5D;
+}
+
+/* 
+body>div {
+    padding: 40px 0;
+}
+
+body>div:nth-of-type(even) {
+    background: rgba(0, 0, 0, .03);
+} */
+ .adicionarButton{
+    background-color: #655D5D;
+    color: #f0f0f0;
+    border-radius: 4.5px;
+    border-color: solid #f0f0f0;
+    margin: 1rem;
+    padding: 6.5px;
+ }
+ .adicionarButton:hover{
+    background-color: #ccc;
+    color: #655D5D;
+    border-radius: 4.5px;
+    border-color: none;
+    margin: 1rem;
+    padding: 6.5px;
+ }
