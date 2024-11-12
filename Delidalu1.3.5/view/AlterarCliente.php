@@ -21,27 +21,32 @@
             
             <p> 
                 Novo nome:
-                <input type="text" name="nome" maxlength="40" placeholder="Digite o seu ID"/>
+                <input type="text" name="nome" maxlength="40" placeholder="Digite o seu nome"/>
             </p>
 
             <p> 
                 Novo CPF:
-                <input type="text" name="cpf" maxlength="40" placeholder="Digite o seu ID"/>
+                <input type="text" name="cpf" maxlength="40" placeholder="Digite o seu CPF"/>
             </p>
 
             <p> 
                 Novo endereço:
-                <input type="text" name="endereco" maxlength="40" placeholder="Digite o seu ID"/>
+                <input type="text" name="endereco" maxlength="40" placeholder="Digite o seu endereco"/>
+            </p>
+
+            <p> 
+                Novo email:
+                <input type="email" name="email" maxlength="40" placeholder="Digite o seu email"/>
             </p>
 
             <p> 
                 Novo telefone:
-                <input type="text" name="telefone" maxlength="40" placeholder="Digite o seu ID"/>
+                <input type="text" name="telefone" maxlength="40" placeholder="Digite o seu telefone"/>
             </p>
 
             <p> 
                 Nova senha:
-                <input type="password" name="senha" maxlength="40" placeholder="Digite o seu ID"/>
+                <input type="password" name="senha" maxlength="40" placeholder="Digite a sua senha"/>
             </p>
 
             <div>
