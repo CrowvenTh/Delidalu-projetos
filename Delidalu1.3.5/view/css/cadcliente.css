@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: #D9B6C6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ body {
 }
 
 .form {
-    background-color: white;
+    background-color: #655D5D;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -24,7 +24,7 @@ body {
 h4 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #f4f4f4;
 }
 
 .form p {
@@ -67,7 +67,7 @@ h4 {
 }
 
 button[type="submit"] {
-    background-color: #28a745;
+    background-color: #D9B6C6;
     color: white;
 }
 
@@ -77,7 +77,7 @@ button[type="reset"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #218838;
+    background-color: #d89ab6;
 }
 
 button[type="reset"]:hover {
@@ -93,7 +93,7 @@ div a:hover {
     top: 20px;
     left: 20px; 
     text-decoration: none;
-    background-color: #007bff;
+    background-color: #655D5D;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
@@ -101,5 +101,5 @@ div a:hover {
 }
 
 .login:hover {
-    background-color: #0056b3;
+    background-color: #99858A;
 }
