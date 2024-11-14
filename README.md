@@ -4,11 +4,11 @@ Este repositório é destinado a sistemas e projetos em desenvolvimento que envo
 Este projeto será construido utilizando PHP, SQL, HTML e CSS.
 
 ### logotipo
-<img width="350px" src="delidalu_php0.0/Prototipo_index/view/design_&_layout/logotipo/delidalucon.png">
+<img width="350px" src="delidalu_php/view/design_&_layout/logotipo/delidalucon.png">
 
 ### Paleta de Cores
 
-<img src="delidalu_php0.0/Prototipo_index/view/design_&_layout/paleta.png">
+<img src="delidalu_php/view/design_&_layout/paleta.png">
 
 | Cor           | Hexadecimal | Exemplo                            |
 |---------------|-------------|-------------------------------------|
