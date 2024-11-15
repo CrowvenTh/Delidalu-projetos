@@ -3,7 +3,7 @@ session_start();
 // include("CadProduto.php");
 
 require '../../model/ClassEstoque.php';
-require '../../model/DAO/produto/ClassEstDAO.php';
+require '../../model/DAO/ClassEstDAO.php';
 
 $ClassEstDAO = new ClassEstDAO();
 $us = $ClassEstDAO->listarProduto();
