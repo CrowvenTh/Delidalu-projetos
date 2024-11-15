@@ -5,7 +5,6 @@ require_once '../model/DAO/ClassEstDAO.php';
 
 $idproduto = @$_POST['idproduto'];
 $nome = @$_POST['nome'];
-$tipo = @$_POST['tipo'];
 $quantidade = @$_POST['quantidade'];
 $preco = @$_POST['preco'];
 

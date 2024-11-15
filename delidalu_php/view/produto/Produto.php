@@ -10,13 +10,10 @@ $us = $ClassEstDAO->listarProduto();
 
 foreach ($us as $us){
     echo "<tr>";
-    echo "<td scope='col'><p align='center'>" . $us['idProduto'] . "</p></td>";
+    echo "<td scope='col'><p align='center'>" . $us['idproduto'] . "</p></td>";
     echo "<td scope='col'><p align='center'>" . $us['nome'] . "</p></td>";
     echo "</tr>"; 
 }
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -28,6 +25,9 @@ foreach ($us as $us){
     <link rel="stylesheet" href="../css/index.css">
     <link rel="icon" type="image/x-icon" href="../design_&_layout/logotipo/delidalucon.png">
 </head>
+?>
+
+
 
 <body>
     <header>
