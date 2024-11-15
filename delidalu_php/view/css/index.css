@@ -74,6 +74,8 @@ section {
     margin-bottom: 20px;
 }
 
+/* rodape */
+
 footer {
     background-color: #655D5D;
     color: white;
@@ -119,9 +121,8 @@ footer p {
     height: 15px;
 }
 
-/* ====================================== */
-/* ================Produtos============== */
-/* ====================================== */
+
+/* Produtos */
 
 .grid {
     display: grid;
@@ -132,21 +133,11 @@ footer p {
     grid-template-columns: repeat(4, 1fr);
 }
 
-Auto-fit vai calcular automaticamente o total de colunas
-.grid-template-columns-5 {
-    grid-template-columns: repeat(auto-fit, 100px);
-}
-
-Com o auto-fit realmente é criado um layout responsivo
-.grid-template-columns-6 {
-    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
-}
-
 .item {
     margin: 5.5px;
     background: #99858A;
     text-align: center;
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     border-radius: 4.5px;
 }
 
@@ -172,15 +163,7 @@ h1 {
     color: #655D5D;
 }
 
-/* 
-body>div {
-    padding: 40px 0;
-}
-
-body>div:nth-of-type(even) {
-    background: rgba(0, 0, 0, .03);
-} */
- .adicionarButton{
+.adicionarButton{
     background-color: #655D5D;
     color: #f0f0f0;
     border-radius: 4.5px;
