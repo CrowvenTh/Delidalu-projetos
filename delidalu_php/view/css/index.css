@@ -124,45 +124,54 @@ footer p {
 
 /* Produtos */
 
-.grid {
-    display: grid;
-}
-
 /* O repeat vai repetir o número de colunas */
 .grid-template-columns-4 {
     grid-template-columns: repeat(4, 1fr);
+}
+
+ .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo: cada coluna terá no mínimo 250px e no máximo 1fr */
+    gap: 20px; /* Espaçamento entre os itens */
+    max-width: 1200px; /* Largura máxima do container da grid */
+    margin: 0 auto; /* Centralizar a grid */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #f0f0f0;
+    border-radius: 10px;
 }
 
 .item {
     margin: 5.5px;
     background: #99858A;
     text-align: center;
-    /* font-size: 1.5em; */
-    border-radius: 4.5px;
+    font-size: 1.2em; /* Font-size ajustado para que o texto não seja muito grande */
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicionando sombra para destaque */
 }
 
-.imgProduto{
+.imgProduto {
     width: 250px;
-    height: 210px;
-    padding: 20px;
+    height: auto; /* Ajusta a altura da imagem proporcionalmente à largura */
     border-radius: 2rem;
+    margin-bottom: 10px;
 }
 
-.grid {
-    border-radius: 4.5px;
-    max-width: 1250px;
-    margin: 0 auto;
-    /* border: 1px solid #ccc; */
-    background-color: #f0f0f0;
+h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #f0f0f0;
 }
 
-h1 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: normal;
-    color: #655D5D;
+p {
+    font-size: 1rem;
+    color: #f0f0f0;
+    margin: 5px 0;
 }
-
 .adicionarButton{
     background-color: #655D5D;
     color: #f0f0f0;
