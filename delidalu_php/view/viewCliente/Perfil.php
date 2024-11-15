@@ -13,7 +13,7 @@ if(!isset($_SESSION['id_usuario'])){
     <meta charset="UTF-8">
    
     <title>Perfil</title>
-    <link rel="stylesheet" href="css/cadcliente.css">
+    <link rel="stylesheet" href="../css/cadcliente.css">
 </head>
 
 <body>

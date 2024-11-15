@@ -24,9 +24,9 @@ switch($acao){
         $addproduto = $ClassEstDAO->addProduto($addproduto);
 
         if($addproduto >= 1){
-            header('Location:../view/CadProduto.php?&MSG= Produto adicionado com sucesso ao estoque!');
+            header('Location:../view/viewProduto/CadProduto.php?&MSG= Produto adicionado com sucesso ao estoque!');
         } else {
-            header('Location:../view/CadProduto.php?&MSG= Não foi possivel adicionar produto ao estoque!');
+            header('Location:../view/viewProduto/CadProduto.php?&MSG= Não foi possivel adicionar produto ao estoque!');
         }
 
         break;
