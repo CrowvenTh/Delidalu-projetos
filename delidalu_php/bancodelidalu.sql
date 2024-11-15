@@ -12,7 +12,7 @@ create table if not exists cliente (
     telefone varchar(15),
 	senha varchar(255));
 
-create table if not exists estoque (id int not null primary key auto_increment, nome varchar(50), tipo varchar(50), quantidade int, preco double);
+create table if not exists estoque (id int not null primary key auto_increment, nome varchar(50), quantidade int, preco double);
 
 create table if not exists clientepedido (id int not null primary key auto_increment, idcliente int not null, idestoque int not null, quantidadepedido int, totalpedido double, datapedido date,
 foreign key (idcliente) references cliente(id),

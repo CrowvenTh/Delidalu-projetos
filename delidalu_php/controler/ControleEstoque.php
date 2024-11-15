@@ -15,7 +15,6 @@ $addproduto = new ClassEstoque();
 
 $addproduto->setIdproduto($idproduto);
 $addproduto->setNome($nome);
-$addproduto->setTipo($tipo);
 $addproduto->setQuantidade($quantidade);
 $addproduto->setPreco($preco);
 
