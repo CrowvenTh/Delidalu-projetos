@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
    
     <title>Listagem</title>
-    <link rel="stylesheet" href="css/cadcliente.css">
+    <link rel="stylesheet" href="../css/cadcliente.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <h4>Formulário de Listagem de Pedido</h4>
 
         <?php
-    require '../model/DAO/ClassClienteDAO.php';
+    require '../../model/DAO/ClassClienteDAO.php';
 
     $ClassClienteDAO = new ClassClienteDAO();
     $us = $ClassClienteDAO->listarpedido();

@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
    
     <title>Excluir</title>
-    <link rel="stylesheet" href="css/cadcliente.css">
+    <link rel="stylesheet" href="../css/cadcliente.css">
 </head>
 
 <body>
-    <a href="Login.php" class="login">Login</a>
+    <a href="../viewCliente/Login.php" class="login">Login</a>
     <div class="form">
         <h4>Formulário de Exclusão de Pedido</h4>
-        <form method="post" action="../controler/ControleCliente.php?ACAO=excluirpedido">
+        <form method="post" action="../../controler/ControleCliente.php?ACAO=excluirpedido">
 
             <p> 
                 Digite o ID para exclusão:

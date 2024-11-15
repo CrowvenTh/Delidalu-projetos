@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
    
     <title>Alterar</title>
-    <link rel="stylesheet" href="css/cadcliente.css">
+    <link rel="stylesheet" href="../css/cadcliente.css">
 </head>
 
 <body>
     <a href="Login.php" class="login">Login</a>
     <div class="form">
         <h4>Formulário de Alteração de Cliente</h4>
-        <form method="post" action="../controler/ControleCliente.php?ACAO=alterarcliente">
+        <form method="post" action="../../controler/ControleCliente.php?ACAO=alterarcliente">
 
             <p> 
                 Digite o seu ID atual:

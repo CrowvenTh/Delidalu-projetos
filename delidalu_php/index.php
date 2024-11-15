@@ -12,15 +12,15 @@ session_start();
     <link rel="stylesheet" href="view/css/index.css">
     <link rel="icon" type="image/x-icon" href="view/design_&_layout/logotipo/delidalucon.png">
 </head>
-
+ 
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="view/Produto.php">Produtos</a></li>
-                <li><a href="view/Login.php">Login</a></li>
-                <li><a href="view/CadCliente.php">Cadastro</a></li>
+                <li><a href="view/viewProduto/Produto.php">Produtos</a></li>
+                <li><a href="view/viewCliente/Login.php">Login</a></li>
+                <li><a href="view/viewCliente/CadCliente.php">Cadastro</a></li>
             </ul>
         </nav>
     </header>

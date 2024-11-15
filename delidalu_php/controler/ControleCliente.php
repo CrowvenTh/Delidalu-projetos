@@ -45,14 +45,15 @@ $processar->setDatapedido($datapedido);
 
 $ClassClienteDAO = new ClassClienteDAO();
 
+
 switch($acao) {
 
     case "verificarLogin":
         $login = $ClassClienteDAO->login($processar);
         if ($login) {  
-            header('Location:../view/Perfil.php');
+            header('Location:../view/viewCliente/Perfil.php');
         } else {  
-            header('Location:../view/Login.php?&MSG=Não foi possível realizar o login!');
+            header('Location:../view/viewCliente/Login.php?&MSG=Não foi possível realizar o login!');
         }
         
         break;
@@ -61,9 +62,9 @@ switch($acao) {
         $cliente = $ClassClienteDAO->cadastrarcliente($processar);
 
 	    if($cliente >= 1){
-            header('Location:../view/CadCliente.php?&MSG= Cadastro realizado com sucesso!');
+            header('Location:../view/viewCliente/CadCliente.php?&MSG= Cadastro realizado com sucesso!');
         } else {
-            header('Location:../view/CadCliente.php?&MSG= Não foi possivel realizar o cadastro!');
+            header('Location:../view/viewCliente/CadCliente.php?&MSG= Não foi possivel realizar o cadastro!');
         }
 
         break;
@@ -74,14 +75,14 @@ switch($acao) {
         if($excluir >= 1){
             header('Location:../index.php?&MSG= Exclusão realizada com sucesso!');
         } else {
-            header('Location:../view/ExcluirCliente.php?&MSG= Não foi possivel realizar a exclusão!');
+            header('Location:../view/viewCliente/ExcluirCliente.php?&MSG= Não foi possivel realizar a exclusão!');
         }     
             break;
 //
     case "alterarcliente":
         $alterar = $ClassClienteDAO->alterarcliente($processar);
         if($alterar >= 1){
-            header('Location:../view/Perfil.php?&MSG= Alteração realizada com sucesso!');
+            header('Location:../view/viewCliente/Perfil.php?&MSG= Alteração realizada com sucesso!');
         } else {
             header('Location:../view/AlterarCliente.php?&MSG= Não foi possivel realizar a alteração!');
 
@@ -93,9 +94,9 @@ switch($acao) {
         $pedido = $ClassClienteDAO->cadastrarpedido($processar);
 
         if($pedido >= 1){
-            header('Location:../view/CadPedido.php?&MSG= Cadastro realizado com sucesso!');
+            header('Location:../view/viewCliente/CadPedido.php?&MSG= Cadastro realizado com sucesso!');
         } else {
-            header('Location:../view/CadPedido.php?&MSG= Não foi possivel realizar o cadastro!');
+            header('Location:../view/viewCliente/CadPedido.php?&MSG= Não foi possivel realizar o cadastro!');
         }
 
         break;
@@ -105,9 +106,9 @@ switch($acao) {
         $alterar = $ClassClienteDAO->alterarpedido($processar);
 
         if($alterar >= 1){
-            header('Location:../view/AlterarPedido.php?&MSG= Alteração realizada com sucesso!');
+            header('Location:../view/viewCliente/AlterarPedido.php?&MSG= Alteração realizada com sucesso!');
         } else {
-            header('Location:../view/AlterarPedido.php?&MSG= Não foi possivel realizar a alteração!');
+            header('Location:../view/viewCliente/AlterarPedido.php?&MSG= Não foi possivel realizar a alteração!');
 
         }
 
@@ -118,9 +119,9 @@ switch($acao) {
         $excluir = $ClassClienteDAO->excluirpedido($processar);
 
         if($excluir >= 1){
-            header('Location:../view/ExcluirPedido.php?&MSG= Exclusão realizada com sucesso!');
+            header('Location:../view/viewCliente/ExcluirPedido.php?&MSG= Exclusão realizada com sucesso!');
         } else {
-            header('Location:../view/ExcluirPedido.php?&MSG= Não foi possivel realizar a exclusão!');
+            header('Location:../view/viewCliente/ExcluirPedido.php?&MSG= Não foi possivel realizar a exclusão!');
         }
 
 

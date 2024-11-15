@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
    
     <title>Cadastro</title>
-    <link rel="stylesheet" href="css/cadcliente.css">
+    <link rel="stylesheet" href="../css/cadcliente.css">
 </head>
 
 <body>
-    <a href="Login.php" class="login">Login</a>
+    <a href="../viewCliente/Login.php" class="login">Login</a>
     <div class="form">
         <h4>Formulário de Cadastro de Pedido</h4>
-        <form method="post" action="../controler/ControleCliente.php?ACAO=cadastrarPedido">
+        <form method="post" action="../../controler/ControleCliente.php?ACAO=cadastrarPedido">
             <p> 
                 ID do cliente:
                 <input type="text" name="idcliente" maxlength="40" placeholder="ID" />
