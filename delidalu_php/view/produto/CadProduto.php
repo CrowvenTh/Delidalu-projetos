@@ -12,7 +12,8 @@
     <a href="../index.php" class="login">Voltar</a>
     <div class="form">
         <h4>Cadastro de Produtos</h4>
-        <form method="post" action="../controler/ControleEstoque.php?ACAO=addProduto">
+        <!-- <form method="post" action="../controler/ControleEstoque.php?ACAO=addProduto"> -->
+        <form method="post" action="../../controler/ControleEstoque.php?ACAO=addProduto">
             <p> 
                 Produto:
                 <input type="text" id="nome" name="nome" maxlength="40" placeholder="" />

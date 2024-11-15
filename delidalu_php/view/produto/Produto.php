@@ -1,5 +1,21 @@
 <?php
 session_start();
+// include("CadProduto.php");
+
+require '../../model/ClassEstoque.php';
+require '../../model/DAO/produto/ClassEstDAO.php';
+
+$ClassEstDAO = new ClassEstDAO();
+$us = $ClassEstDAO->listarProduto();
+
+foreach ($us as $us){
+    
+    echo "<tr>";
+    echo "<td scope='col'><p align='center'>" . $us['idProduto'] . "</p></td>";
+    echo "<td scope='col'><p align='center'>" . $us['nome'] . "</p></td>";
+    echo "</tr>"; 
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +47,6 @@ session_start();
             <section class="grid grid-template-columns-4">
                 <div class="item">
                     <img class="imgProduto" src="https://img.freepik.com/vetores-premium/adicionar-icone-sinal-brilhante-graficos-vetoriais_292645-550.jpg?w=740">
-                    <!-- <input class="adicionarButton" type="number" placeholder="Selecione a quantidad"> -->
                     <button class="adicionarButton"><a href="../produto/CadProduto.php">Adicionar</a></button>
                 </div>
             </section>
