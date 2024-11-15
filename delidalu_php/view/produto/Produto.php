@@ -9,7 +9,6 @@ $ClassEstDAO = new ClassEstDAO();
 $us = $ClassEstDAO->listarProduto();
 
 foreach ($us as $us){
-    
     echo "<tr>";
     echo "<td scope='col'><p align='center'>" . $us['idProduto'] . "</p></td>";
     echo "<td scope='col'><p align='center'>" . $us['nome'] . "</p></td>";
@@ -17,6 +16,7 @@ foreach ($us as $us){
 }
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">

@@ -8,7 +8,7 @@ class ClassEstDAO
     {
         try {
             $pdo = Conexao::getInstance();
-            $sql = "INSERT INTO estoque (id, nome, quantidade, preco) values (?,?,?,?,?)";
+            $sql = "INSERT INTO estoque (id, nome, quantidade, preco) values (?,?,?,?)";
             $stmt = $pdo->prepare($sql);
 
             $stmt->bindValue(1, $addproduto->getIdproduto());
