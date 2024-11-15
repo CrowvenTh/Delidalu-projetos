@@ -3,7 +3,6 @@
 class ClassEstoque{
     private $idproduto;
     private $nome;
-    private $tipo;
     private $quantidade;
     private $preco;
 
@@ -14,10 +13,6 @@ class ClassEstoque{
 
     public function getNome(){
         return $this->nome;
-    }
-
-    public function getTipo(){
-        return $this->tipo;
     }
 
     public function getQuantidade(){
@@ -36,10 +31,6 @@ class ClassEstoque{
 
     public function setNome($nome){
         $this->nome = $nome;
-    }
-
-    public function setTipo($tipo){
-        $this->tipo = $tipo;
     }
 
     public function setQuantidade($quantidade){

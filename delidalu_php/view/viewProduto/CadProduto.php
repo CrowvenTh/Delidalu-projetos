@@ -5,21 +5,19 @@
     <meta charset="UTF-8">
    
     <title>Cadastro de Produtos</title>
-    <link rel="stylesheet" href="css/cadcliente.css">
+    <link rel="stylesheet" href="../css/cadcliente.css">
 </head>
 
 <body>
     <a href="../index.php" class="login">Voltar</a>
+    <a href="Produto.php" class="login">Voltar</a>
     <div class="form">
         <h4>Cadastro de Produtos</h4>
-        <form method="post" action="../controler/ControleEstoque.php?ACAO=addProduto">
+        <!-- <form method="post" action="../controler/ControleEstoque.php?ACAO=addProduto"> -->
+        <form method="post" action="../../controler/ControleEstoque.php?ACAO=addProduto">
             <p> 
                 Produto:
                 <input type="text" id="nome" name="nome" maxlength="40" placeholder="" />
-            </p>
-            <p> 
-                Tipo:
-                <input type="text" id="tipo" name="tipo" maxlength="40" placeholder="" />
             </p>
             <p> 
                 Quantidade:
