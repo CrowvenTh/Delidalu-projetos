@@ -8,12 +8,13 @@ require '../../model/DAO/ClassEstDAO.php';
 $ClassEstDAO = new ClassEstDAO();
 $us = $ClassEstDAO->listarProduto();
 
-foreach ($us as $us){
-    echo "<tr>";
-    echo "<td scope='col'><p align='center'>" . $us['id'] . "</p></td>";
-    echo "<td scope='col'><p align='center'>" . $us['nome'] . "</p></td>";
-    echo "</tr>"; 
-}
+// foreach ($us as $us){
+//     echo "<tr>";
+//     echo "<td scope='col'><p align='center'>" . $us['id'] . "</p></td>";
+//     echo "<td scope='col'><p align='center'>" . $us['nome'] . "</p></td>";
+//     echo "</tr>"; 
+// }
+
 ?>
 
 <!DOCTYPE html>
@@ -47,8 +48,18 @@ foreach ($us as $us){
                     <img class="imgProduto" src="https://img.freepik.com/vetores-premium/adicionar-icone-sinal-brilhante-graficos-vetoriais_292645-550.jpg?w=740">
                     <button class="adicionarButton"><a href="../produto/CadProduto.php">Adicionar</a></button>
                 </div>
-            </section>
+                <?php
+                foreach ($us as $us) {
+                    echo "<div class='item'>";
+                    echo "<img class='imgProduto' src='path_to_image/{$us['image']}' alt='Imagem do produto'>";
+                    echo "<h3>" . $us['nome'] . "</h3>";
+                    echo "<p>Preço: " . $us['preco'] . "</p>";
+                    echo "<button class='adicionarButton'><a href='../produto/CadProduto.php?id=" . $us['id'] . "'>Adicionar</a></button>";
+                    echo "</div>";
+                }
+                ?>
         </div>
+        </section>
     </main>
 
     <footer>
