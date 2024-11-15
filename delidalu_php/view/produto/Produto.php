@@ -8,12 +8,6 @@ require '../../model/DAO/ClassEstDAO.php';
 $ClassEstDAO = new ClassEstDAO();
 $us = $ClassEstDAO->listarProduto();
 
-// foreach ($us as $us){
-//     echo "<tr>";
-//     echo "<td scope='col'><p align='center'>" . $us['id'] . "</p></td>";
-//     echo "<td scope='col'><p align='center'>" . $us['nome'] . "</p></td>";
-//     echo "</tr>"; 
-// }
 ?>
 
 <!DOCTYPE html>
