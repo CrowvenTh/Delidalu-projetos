@@ -17,7 +17,7 @@ if(!isset($_SESSION['id_usuario'])){
 </head>
 
 <body>
-    <a href="Login.php" class="login">Login</a>
+    <a href="../viewCliente/Login.php" class="login">Login</a>
     <div class="form">
         <h1>Perfil de cliente</h1>
         <br><br>
@@ -37,11 +37,11 @@ if(!isset($_SESSION['id_usuario'])){
         <br><br>
         <h5>Opções</h5>
         <br>
-        <a href="AlterarCliente.php">Alterar</a>
+        <a href="../viewCliente/AlterarCliente.php">Alterar</a>
         <br>
-        <a href="ExcluirCliente.php">Excluir conta</a>
+        <a href="../viewCliente/ExcluirCliente.php">Excluir conta</a>
         <br>
-        <a href="CadCliente.php">Cadastrar nova conta</a>
+        <a href="../viewCliente/CadCliente.php">Cadastrar nova conta</a>
 
     </div>
 </body>

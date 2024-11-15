@@ -12,7 +12,7 @@ session_start();
 </head>
 
 <body>
-<a href="CadCliente.php" class="cadastro">Cadastrar-se</a>
+<a href="../viewCliente/CadCliente.php" class="cadastro">Cadastrar-se</a>
     <div class="form">
         <h4>Formulário de Login</h4>
         <form method="post" action="../../controler/ControleCliente.php?ACAO=verificarLogin">
