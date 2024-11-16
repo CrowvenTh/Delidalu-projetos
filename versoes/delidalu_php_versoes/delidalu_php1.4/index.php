@@ -21,6 +21,7 @@ session_start();
                 <li><a href="view/Produto.php">Produtos</a></li>
                 <li><a href="view/Login.php">Login</a></li>
                 <li><a href="view/CadCliente.php">Cadastro</a></li>
+                <li><a href="view/Perfil.php">Meu Perfil</a></li>
             </ul>
         </nav>
     </header>

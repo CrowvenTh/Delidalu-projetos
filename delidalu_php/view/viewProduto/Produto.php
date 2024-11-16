@@ -26,9 +26,10 @@ $us = $ClassEstDAO->listarProduto();
         <nav>
             <ul>
                 <li><a href="../../index.php">Home</a></li>
-                <li><a href="../ViewProduto/Produto.php">Produtos</a></li>
-                <li><a href="../ViewCliente/">Login</a></li>
-                <li><a href="../ViewCliente/CadCliente.php">Cadastro</a></li>
+                <li><a href="../viewProduto/Produto.php">Produtos</a></li>
+                <li><a href="../viewCliente/login.php">Login</a></li>
+                <li><a href="../viewCliente/CadCliente.php">Cadastro</a></li>
+                <li><a href="../viewCliente/Perfil.php">Meu Perfil</a></li>
             </ul>
         </nav>
     </header>
