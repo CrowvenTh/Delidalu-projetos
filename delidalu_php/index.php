@@ -34,31 +34,34 @@ session_start();
                 alt="Logo Corvus.tech">
             <br>
             <h1>Sobre nós</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
-            </p>
-            <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                laborum.
-            </p>
-            <p>
-                Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra,
-                est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod
-                gravida.
-            </p>
-            <p>
-                Aliquam erat volutpat. Mauris ac leo euismod, vestibulum elit id, ultrices orci. Suspendisse potenti.
-                Sed varius quam ac venenatis. Phasellus aliquet, risus at convallis feugiat, leo orci volutpat dui,
-                vitae posuere enim lorem id eros.
-            </p>
-            <p>
-                Morbi pretium justo ut ultricies convallis. Praesent sollicitudin metus et massa tincidunt, ut lacinia
-                lorem ultricies. Vivamus dictum, eros vel vulputate eleifend, nisl odio gravida libero, et interdum nisi
-                enim a augue. Etiam euismod nibh eget velit cursus, sed elementum justo facilisis.
-            </p>
+            <div class="texto">
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat.
+                </p>
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                    laborum.
+                </p>
+                <p>
+                    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra,
+                    est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod
+                    gravida.
+                </p>
+                <p>
+                    Aliquam erat volutpat. Mauris ac leo euismod, vestibulum elit id, ultrices orci. Suspendisse potenti.
+                    Sed varius quam ac venenatis. Phasellus aliquet, risus at convallis feugiat, leo orci volutpat dui,
+                    vitae posuere enim lorem id eros.
+                </p>
+                <p>
+                    Morbi pretium justo ut ultricies convallis. Praesent sollicitudin metus et massa tincidunt, ut lacinia
+                    lorem ultricies. Vivamus dictum, eros vel vulputate eleifend, nisl odio gravida libero, et interdum nisi
+                    enim a augue. Etiam euismod nibh eget velit cursus, sed elementum justo facilisis.
+                </p>
+            </div>
         </section>
     </main>
 
@@ -73,8 +76,8 @@ session_start();
             </ul>
             <ul>
                 <h3>Contato</h3>
-                <li>(61) 91234-5678</li>
-                <li><a style="color: white;" href="mailto:#">corvustech@gmail.com</a></li>
+                <li> <img class="autoresImg" src="view/design_&_layout/logotipo/telefone.png"> (61) 91234-5678</li>
+                <li> <img class="autoresImg" src="view/design_&_layout/logotipo/email.png"> <a style="color: white;" href="mailto:#">delidalu@gmail.com</a></li>
             </ul>
             <ul>
                 <h3>Endereço</h3>
@@ -84,9 +87,9 @@ session_start();
             </ul>
             <ul>
                 <h3>Redes Sociais</h3>
-                <li>Instagram</li>
-                <li>WhatsApp</li>
-                <li><a href="https://github.com/CrowvenTh/Delidalu-projetos/tree/main">Github</a></li>
+                <li> <img class="autoresImg" src="view/design_&_layout/logotipo/ig icon.png"> <a href="#">Instagram</a></li>
+                <li> <img class="autoresImg" src="view/design_&_layout/logotipo/whatsapp.png"> <a href="#">WhatsApp</a></li>
+                <li> <img class="autoresImg" src="view/design_&_layout/logotipo/link icon.png"> <a href="https://github.com/CrowvenTh/Delidalu-projetos/tree/main">Github</a></li>
             </ul>
         </div>
     </footer>
