@@ -44,7 +44,7 @@ $us = $ClassEstDAO->listarProduto();
                 <?php
                 foreach ($us as $us) {
                     echo "<div class='item'>";
-                    echo "<img class='imgProduto' src='../view/design_&_layout/viewProdutos/" . $us['image'] . "' alt='img'>";
+                    echo "<img class='imgProduto' src=" . $us['imagem'] . "' alt='img'>";
                     echo "<h3>" . $us['nome'] . "</h3>";
                     echo "<p>Preço: " . $us['preco'] . "</p>";
                     echo "<button class='adicionarButton'><a href='../viewProduto/CadProduto.php?id=" . $us['id'] . "'>Adicionar</a></button>";
