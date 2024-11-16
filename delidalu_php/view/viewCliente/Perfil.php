@@ -48,7 +48,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <br><br>
                 <h4 class="opcoes">Opções</h4>
                 <br>
-                <a href="AlterarCliente.php">Alterar Conta</a>
+                <a href="AlterarCliente.php?idex=<?php echo $_SESSION['id_usuario']; ?>">Alterar Conta</a>
                 <br>
                 <a href="ExcluirCliente.php">Excluir conta</a>
                 <br>

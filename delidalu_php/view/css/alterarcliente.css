@@ -10,6 +10,82 @@ body {
     align-items: center;
 }
 
+
+.form {
+    background-color: #655D5D;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f4f4f4;
+}
+
+.form p {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    background-color: #D9B6C6;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #d89ab6;
+}
+
+button[type="reset"]:hover {
+    background-color: #c82333;
+}
+
+div a:hover {
+    text-decoration: underline;
+}
+
 header {
     background-color: #655D5D;
     color: #f4f4f4;
@@ -150,7 +226,6 @@ footer p {
 
 }
 
-
 .form p {
     font-size: 16px;
     color: #FFFFFF;
@@ -167,7 +242,6 @@ footer p {
 }
 
 .form a:hover {
-    color: #f1caf7;
+    color: #f1caf7; 
     text-decoration: underline;
 }
-
