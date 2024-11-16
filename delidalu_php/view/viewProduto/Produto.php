@@ -49,7 +49,7 @@ $us = $ClassEstDAO->listarProduto();
                     echo "<div class='item'>";
                     echo "<img class='imgProduto' src=" .$us['imagem']." alt='img'>";
                     echo "<h3>" . $us['nome'] . "</h3>"; 
-                    echo "<p>Preço: R$" . $us['preco'] . "</p>";
+                    echo "<p> R$" . $us['preco'] . "</p>";
                     // echo "<button class='adicionarButton'><a href='../viewProduto/CadProduto.php?id=" . $us['id'] . "'>Adicionar</a></button>";
                     echo "<button class='alterarButton'><a href='../viewProduto/CadProduto.php?id=" . $us['id'] . "'>Alterar</a></button>";
                     echo "<button class='excluirButton'><a href='../viewProduto/CadProduto.php?id=" . $us['id'] . "'>Excluir</a></button>";
