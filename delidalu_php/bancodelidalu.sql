@@ -14,10 +14,11 @@ create table if not exists cliente (
 
 create table if not exists estoque (
     id int not null primary key auto_increment,
-    imagem varchar(255),
+    imagem varchar(500),
     nome varchar(50), 
     quantidade int, 
     preco double);
+
 
 create table if not exists clientepedido (id int not null primary key auto_increment, idcliente int not null, idestoque int not null, quantidadepedido int, totalpedido double, datapedido date,
 foreign key (idcliente) references cliente(id),
