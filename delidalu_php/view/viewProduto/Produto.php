@@ -41,14 +41,17 @@ $us = $ClassEstDAO->listarProduto();
                 <div class="item">
                     <img class="imgProduto" src="https://img.freepik.com/vetores-premium/adicionar-icone-sinal-brilhante-graficos-vetoriais_292645-550.jpg?w=740">
                     <button class="adicionarButton"><a href="../viewProduto/CadProduto.php">Adicionar</a></button>
+                    
                 </div>
                 <?php
                 foreach ($us as $us) {
                     echo "<div class='item'>";
                     echo "<img class='imgProduto' src=" . $us['imagem'] . "' alt='img'>";
                     echo "<h3>" . $us['nome'] . "</h3>";
-                    echo "<p>Preço: " . $us['preco'] . "</p>";
-                    echo "<button class='adicionarButton'><a href='../viewProduto/CadProduto.php?id=" . $us['id'] . "'>Adicionar</a></button>";
+                    echo "<p>Preço: R$" . $us['preco'] . "</p>";
+                    // echo "<button class='adicionarButton'><a href='../viewProduto/CadProduto.php?id=" . $us['id'] . "'>Adicionar</a></button>";
+                    echo "<button class='alterarButton'><a href='../viewProduto/CadProduto.php?id=" . $us['id'] . "'>Alterar</a></button>";
+                    echo "<button class='excluirButton'><a href='../viewProduto/CadProduto.php?id=" . $us['id'] . "'>Excluir</a></button>";
                     echo "</div>";
                 }
                 ?>
