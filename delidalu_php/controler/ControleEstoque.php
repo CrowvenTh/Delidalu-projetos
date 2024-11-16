@@ -4,6 +4,7 @@ require_once '../model/ClassEstoque.php';
 require_once '../model/DAO/ClassEstDAO.php';
 
 $idproduto = @$_POST['idproduto'];
+$imagem = @$_POST['imagem']; //imagem
 $nome = @$_POST['nome'];
 $quantidade = @$_POST['quantidade'];
 $preco = @$_POST['preco'];
@@ -13,6 +14,7 @@ $acao = $_GET['ACAO'];
 $addproduto = new ClassEstoque();
 
 $addproduto->setIdproduto($idproduto);
+$addproduto->setImagem($imagem);
 $addproduto->setNome($nome);
 $addproduto->setQuantidade($quantidade);
 $addproduto->setPreco($preco);

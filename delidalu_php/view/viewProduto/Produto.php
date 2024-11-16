@@ -40,15 +40,15 @@ $us = $ClassEstDAO->listarProduto();
             <section class="grid grid-template-columns-4">
                 <div class="item">
                     <img class="imgProduto" src="https://img.freepik.com/vetores-premium/adicionar-icone-sinal-brilhante-graficos-vetoriais_292645-550.jpg?w=740">
-                    <button class="adicionarButton"><a href="../produto/CadProduto.php">Adicionar</a></button>
+                    <button class="adicionarButton"><a href="../viewProduto/CadProduto.php">Adicionar</a></button>
                 </div>
                 <?php
                 foreach ($us as $us) {
                     echo "<div class='item'>";
-                    echo "<img class='imgProduto' src='../view/design_&_layout/produtos/" . $us['image'] . "' alt='img'>";
+                    echo "<img class='imgProduto' src=" . $us['imagem'] . "' alt='img'>";
                     echo "<h3>" . $us['nome'] . "</h3>";
                     echo "<p>Preço: " . $us['preco'] . "</p>";
-                    echo "<button class='adicionarButton'><a href='../produto/CadProduto.php?id=" . $us['id'] . "'>Adicionar</a></button>";
+                    echo "<button class='adicionarButton'><a href='../viewProduto/CadProduto.php?id=" . $us['id'] . "'>Adicionar</a></button>";
                     echo "</div>";
                 }
                 ?>
