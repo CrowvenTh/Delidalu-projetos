@@ -18,6 +18,11 @@ create table if not exists estoque (
     nome varchar(50), 
     quantidade int, 
     preco double);
+    
+insert into estoque values 
+(null,"https://harald.com.br/wp-content/uploads/2020/04/briadeirogormet-melken-700x520-1.jpg","Brigadeiro",55,12.65),
+(null,"https://paleoglutenfree.com/wp-content/uploads/2019/01/best-homemade-brownies-8-of-14-900x1340.jpg","Brownie",40,18.99),
+(null,"https://files.qatarliving.com/post/2022/07/28/CHUROS-MIA-CAFE-Qatar-Living%20(1).jpg","Churros",60,7.55);
 
 
 create table if not exists clientepedido (id int not null primary key auto_increment, idcliente int not null, idestoque int not null, quantidadepedido int, totalpedido double, datapedido date,
@@ -92,5 +97,3 @@ set new.totalpedido = (preco_calc * new.quantidadepedido);
 END //
 
 DELIMITER ;
-
-

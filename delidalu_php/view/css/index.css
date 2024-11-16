@@ -181,11 +181,11 @@ a {
 
 h3 {
     font-size: 1.5rem;
-    margin: 10px 0;
+    margin: 5px 0;
     color: #f0f0f0;
 }
 
-h1 {
+h1 ,p {
     text-align: center;
     text-shadow: 2px 2px 5px #655D5D;
     font-size: 1.5rem;
