@@ -117,6 +117,46 @@ class ClassClienteDAO {
             return false; 
         }
     }
+
+    public function buscarCliente($idCliente)
+    {
+        try {
+            $cliente = new ClassCliente();
+            $pdo = Conexao::getInstance();
+            $sql = "SELECT id, nome, cpf, endereco, email, telefone, senha FROM cliente WHERE id =:id LIMIT 1";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindValue(':id', $idCliente);
+
+            $stmt->execute();
+            $clienteAssoc = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $cliente->setId($clienteAssoc['id']);
+            $cliente->setNome($clienteAssoc['nome']);
+            $cliente->setCpf($clienteAssoc['cpf']);
+            $cliente->setEndereco($clienteAssoc['endereco']);
+            $cliente->setEmail($clienteAssoc['email']);
+            $cliente->setTelefone($clienteAssoc['telefone']);
+            $cliente->setSenha($clienteAssoc['senha']);
+
+            return $cliente;
+        } catch (PDOException $ex) {
+            return $ex->getMessage();
+        }
+    }
+
+    public function listarClientes()
+    {
+        try {
+            $pdo = Conexao::getInstance();
+            $sql = "SELECT * FROM cliente order by (nome) asc";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute();
+            $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $clientes;
+        } catch (PDOException $exc) {
+            echo $exc->getMessage();
+        }
+    }
     
     
     public function cadastrarpedido (ClassCliente $cadastrarPedido){
