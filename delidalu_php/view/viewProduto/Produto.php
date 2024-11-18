@@ -6,7 +6,7 @@ require '../../model/ClassEstoque.php';
 require '../../model/DAO/ClassEstDAO.php';
 
 $ClassEstDAO = new ClassEstDAO();
-$us = $ClassEstDAO->listarProduto();
+$pr = $ClassEstDAO->listarProduto();
 
 ?>
 
@@ -39,20 +39,19 @@ $us = $ClassEstDAO->listarProduto();
             <h1>Catálogo de Produtos</h1>
             <section class="grid grid-template-columns-4">
                 <div class="item">
-                    <!-- <img class="imgProduto" src="https://img.freepik.com/vetores-premium/adicionar-icone-sinal-brilhante-graficos-vetoriais_292645-550.jpg?w=740"> -->
                     <img class="imgProduto" src="../design_&_layout/logotipo/adicionar-icon.png">
                     <button class="adicionarButton"><a href="../viewProduto/CadProduto.php">Adicionar</a></button>
                     
                 </div>
                 <?php
-                foreach ($us as $us) {
+                foreach ($pr as $pr) {
                     echo "<div class='item'>";
-                    echo "<img class='imgProduto' src=" .$us['imagem']." alt='img'>";
-                    echo "<h3>" . $us['nome'] . "</h3>"; 
-                    echo "<p> R$" . $us['preco'] . "</p>";
-                    // echo "<button class='adicionarButton'><a href='../viewProduto/CadProduto.php?id=" . $us['id'] . "'>Adicionar</a></button>";
-                    echo "<button class='alterarButton'><a href='../viewProduto/AltProduto.php?id=" . $us['id'] . "'>Alterar</a></button>";
-                    echo "<button class='excluirButton'><a href='../viewProduto/DelProduto.php?id=" . $us['id'] . "'>Excluir</a></button>";
+                    echo "<img class='imgProduto' src=" .$pr['imagem']." alt='img'>";
+                    echo "<h3>" . $pr['nome'] . "</h3>"; 
+                    echo "<p> R$" . $pr['preco'] . "</p>";
+                    // echo "<button class='adicionarButton'><a href='../viewProduto/CadProduto.php?id=" . $pr['id'] . "'>Adicionar</a></button>";
+                    echo "<button class='alterarButton'><a href='../viewProduto/AltProduto.php?idproduto=" . $pr['idproduto'] . "'>Alterar</a></button>";
+                    echo "<button class='excluirButton'><a href='../viewProduto/DelProduto.php?idproduto=" . $pr['idproduto'] . "'>Excluir</a></button>";
                     echo "</div>";
                 }
                 ?>

@@ -4,18 +4,18 @@ require_once 'Conexao.php';
 class ClassEstDAO
 {
 
-    public function addProduto(ClassEstoque $addproduto)
+    public function adicionarProduto(ClassEstoque $produto)
     {
         try {
             $pdo = Conexao::getInstance();
-            $sql = "INSERT INTO estoque (id, imagem, nome, quantidade, preco) values (?,?,?,?,?)";
+            $sql = "INSERT INTO estoque (idproduto, imagem, nome, quantidade, preco) values (?,?,?,?,?)";
             $stmt = $pdo->prepare($sql);
 
-            $stmt->bindValue(1, $addproduto->getIdproduto());
-            $stmt->bindValue(2, $addproduto->getImagem());
-            $stmt->bindValue(3, $addproduto->getNome());
-            $stmt->bindValue(4, $addproduto->getQuantidade());
-            $stmt->bindValue(5, $addproduto->getPreco());
+            $stmt->bindValue(1, $produto->getIdproduto());
+            $stmt->bindValue(2, $produto->getImagem());
+            $stmt->bindValue(3, $produto->getNome());
+            $stmt->bindValue(4, $produto->getQuantidade());
+            $stmt->bindValue(5, $produto->getPreco());
             $stmt->execute();
             return TRUE;
         } catch (PDOException $exc) {
@@ -37,15 +37,24 @@ class ClassEstDAO
             echo $exc->getMessage();
         }
     }
-    public function buscarProduto($id)
+    public function buscarProduto($idproduto)
     {
         try {
+            $produto = new ClassEstoque();
             $pdo = Conexao::getInstance();
-            $sql = "SELECT * FROM estoque WHERE id = ?";
+            $sql = "SELECT idproduto imagem, nome,quantidade, preco WHERE idproduto = :idproduto LIMIT 1";
             $stmt = $pdo->prepare($sql);
-            $stmt->bindValue(1, $id);
+            $stmt->bindValue(':idproduto', $idproduto);
+
             $stmt->execute();
-            return $stmt->fetch(PDO::FETCH_ASSOC);
+            $produtoAssoc = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $produto->setIdproduto($produtoAssoc['idproduto']);
+            $produto->setImagem($produtoAssoc['imagem']);
+            $produto->setQuantidade($produtoAssoc['quantidade']);
+            $produto->setPreco($produtoAssoc['preco']);
+
+            return $produto;
         } catch (PDOException $exc) {
             echo $exc->getMessage();
         }
@@ -55,7 +64,7 @@ class ClassEstDAO
     {
         try {
             $pdo = Conexao::getInstance();
-            $sql = "UPDATE estoque SET imagem=?, nome=?, quantidade=?, preco=? where id=?";
+            $sql = "UPDATE estoque SET imagem=?, nome=?, quantidade=?, preco=? where idproduto=?";
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(1, $alterarProduto->getImagem());
             $stmt->bindValue(2, $alterarProduto->getNome());
@@ -69,18 +78,5 @@ class ClassEstDAO
             echo $exc->getMessage();
         }
     }
-
-    // public function excluirProduto(ClassEstoque $excluirProduto){
-    //     try{
-    //         $pdo = Conexao::getInstance();
-    //         $sql = "DELETE FROM estoque WHERE id =:id";
-    //         $stmt = $pdo->prepare($sql);
-    //         $stmt->bindValue(':id', $idproduto);
-    //         $stmt->execute();
-    //         return TRUE;
-    //     } catch (PDOException $exc){
-    //         echo $exc->getMessage();
-    //     }
-    // }
 
 }

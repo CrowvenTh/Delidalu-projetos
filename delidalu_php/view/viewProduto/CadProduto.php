@@ -15,7 +15,7 @@
         
     <h4>Cadastro de Produtos</h4>
 
-        <form method="post" action="../../controler/ControleEstoque.php?ACAO=addProduto">
+        <form method="post" action="../../controler/ControleEstoque.php?ACAO=adicionarProduto">
             <p> 
                 Imagem:
                 <input type="url" id="imagem" name="imagem" maxlength="500" placeholder="Insira o link da imagem" />

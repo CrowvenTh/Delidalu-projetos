@@ -12,21 +12,21 @@ $preco = @$_POST['preco'];
 $acao = $_GET['ACAO'];
 // $idproduto = $_GET['idproduto'];
 
-$addproduto = new ClassEstoque();
+$produto = new ClassEstoque();
 
-$addproduto->setIdproduto($idproduto);
-$addproduto->setImagem($imagem);
-$addproduto->setNome($nome);
-$addproduto->setQuantidade($quantidade);
-$addproduto->setPreco($preco);
+$produto->setIdproduto($idproduto);
+$produto->setImagem($imagem);
+$produto->setNome($nome);
+$produto->setQuantidade($quantidade);
+$produto->setPreco($preco);
 
 $ClassEstDAO = new ClassEstDAO();
 
 switch ($acao) {
-    case "addProduto":
-        $addproduto = $ClassEstDAO->addProduto($addproduto);
+    case "adicionarProduto":
+        $produto = $ClassEstDAO->adicionarProduto($produto);
 
-        if ($addproduto >= 1) {
+        if ($produto >= 1) {
             header('Location:../view/viewProduto/CadProduto.php?&MSG= Produto adicionado com sucesso ao estoque!');
         } else {
             header('Location:../view/viewProduto/CadProduto.php?&MSG= Não foi possivel adicionar produto ao estoque!');
@@ -35,21 +35,12 @@ switch ($acao) {
         break;
 
     case 'alterarProduto':
-        $alterarProduto = $ClassEstDAO->alterarProduto($addproduto);
+        $alterarProduto = $ClassEstDAO->alterarProduto($produto);
 
-        if ($addproduto >= 1) {
+        if ($produto == 1) { //varivael == 1 - referencia do professor 
             header('Location:../index.php?&MSG= Produto alterado com sucesso!');
         } else {
             header('Location:../index.php?&MSG= Não foi possível alterar o produto!');
         }
 
-    // case 'excluirProduto':
-    //     $excluirProduto = $ClassEstDAO->excluirProduto($addproduto);
-
-    //     if ($excluirProduto >= 1) {
-    //         header('Location:../index.php?&MSG= Produto excluido com sucesso!');
-    //     } else {
-    //         header('Location:../index.php?&MSG= Não foi possível exlucir o produto!!');
-    //     }
-    //     break;
 }
