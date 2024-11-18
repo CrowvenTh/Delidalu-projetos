@@ -22,14 +22,28 @@ $us = $ClassEstDAO->listarProduto();
 </head>
 
 <body>
-    <header>
+<header>
         <nav>
             <ul>
                 <li><a href="../../index.php">Home</a></li>
-                <li><a href="../viewProduto/Produto.php">Produtos</a></li>
-                <li><a href="../viewCliente/login.php">Login</a></li>
-                <li><a href="../viewCliente/CadCliente.php">Cadastro</a></li>
-                <li><a href="../viewCliente/Perfil.php">Meu Perfil</a></li>
+                <li><a href="Produto.php">Produtos</a></li>
+                <?php
+
+    if (!isset($_SESSION['nome'])){
+
+                ?>
+                <li><a href="../../view/viewCliente/Login.php">Login</a></li>
+                <li><a href="../../view/viewCliente/CadCliente.php">Cadastro</a></li>
+                <?php
+    }else {
+
+    
+
+                ?>
+                <li><a href="../../view/viewCliente/Perfil.php">Meu Perfil</a></li>
+                <?php
+    }
+                ?>
             </ul>
         </nav>
     </header>

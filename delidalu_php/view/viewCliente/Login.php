@@ -10,7 +10,6 @@ session_start();
     <title>Login</title>
     <link rel="stylesheet" href="../css/login.css">
 </head>
-
 <body>
 <a href="../viewCliente/CadCliente.php" class="cadastro">Cadastrar-se</a>
     <div class="form">

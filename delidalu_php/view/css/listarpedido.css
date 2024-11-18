@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #D9B6C6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    background-color: #655D5D;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 800px;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f4f4f4;
+}
+
+.form p {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    background-color: #D9B6C6;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #d89ab6;
+}
+
+button[type="reset"]:hover {
+    background-color: #c82333;
+}
+
+div a:hover {
+    text-decoration: underline;
+}
+
+.login {
+    position: absolute;
+    top: 20px;
+    left: 20px; 
+    text-decoration: none;
+    background-color: #655D5D;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login:hover {
+    background-color: #99858A;
+}
+
+table{
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden; /* Para garantir bordas arredondadas */
+    background-color: #99858A;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden; /* Para garantir bordas arredondadas */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para as células da tabela */
+table td, table th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+table td {
+    background-color: #fff;
+}
+
+table th {
+    background-color: #D9B6C6;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form table {
+    margin: 20px 0;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+table tr:hover td {
+    background-color: #f1f1f1;
+}
+
+.exemplo {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: #655D5D; /* Mesma cor de fundo da div .form */
+    color: #f4f4f4; /* Texto claro para contraste */
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden;
+}
+
+
+.exemplo td {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase; 
+    border: none; 
+}
+
+/* Estilo adicional para espaçamento e alinhamento */
+.exemplo p {
+    margin: 0;
+}
+
+/* Adicionando hover para a tabela do cabeçalho */
+.exemplo td:hover {
+    background-color: #99858A; /* Leve realce */
+    color: #000; /* Contraste no texto */
+}
