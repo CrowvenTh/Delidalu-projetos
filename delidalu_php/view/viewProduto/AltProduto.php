@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 
     <title>Alteração de Cadastro de Produtos</title>
-    <link rel="stylesheet" href="../css/cadcliente.css">
+    <link rel="stylesheet" href="../css/cadProduto.css">
 </head>
 
 <body>
@@ -18,11 +18,7 @@
 
         if (isset($_GET['idproduto'])) {
             $idproduto = $_GET['idproduto'];
-            $imagem = $_POST['imagem'];
-            $nome = $_POST['nome'];
-            $quantidade = $_POST['quantidade'];
-            $preco = $_POST['preco'];
-
+            
             $ClassEstDAO = new ClassEstDAO();
             $produto = $ClassEstDAO->buscarProduto($idproduto);
         }
@@ -30,26 +26,24 @@
 
         <h4>Alteração de Produtos</h4>
 
-        <form method="post" action="../../controler/ControleEstoque.php?ACAO=alterarProduto&idproduto=<?php echo $idproduto; ?>">
-            <p>
-                Imagem:
-                <input type="url" id="imagem" name="imagem" maxlength="500" placeholder="Insira o link da imagem" value="<?php echo $imagem; ?>" />
-            </p>
-            <p>
-                Produto:
-                <input type="text" id="nome" name="nome" maxlength="40" placeholder="Insira o nome do produto" value="<?php echo $nome; ?>" />
-            </p>
-            <p>
-                Quantidade:
-                <input type="text" id="quantidade" name="quantidade" maxlength="40" placeholder="Insira a quantidade do produto" value="<?php echo $quantidade; ?>" />
-            </p>
-            <p>
-                Preço:
-                <input type="text" id="preco" name="preco" maxlength="40" placeholder="Insira o preço do produto" value="<?php echo $preco; ?>" />
-            </p>
-            <button type="submit" value="Registrar">Confirmar alterações</button>
+        <form action="ControleEstoque.php?ACAO=alterarProduto" method="POST">
+            <input type="hidden" name="idproduto" value="<?php echo $produto->getIdproduto(); ?>">
+
+            <label for="imagem">Imagem:</label>
+            <input type="text" name="imagem" value="<?php echo $produto->getImagem(); ?>"><br>
+
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" value="<?php echo $produto->getNome(); ?>"><br>
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" name="quantidade" value="<?php echo $produto->getQuantidade(); ?>"><br>
+
+            <label for="preco">Preço:</label>
+            <input type="text" name="preco" value="<?php echo $produto->getPreco(); ?>"><br>
+
+            <button type="submit">Salvar Alterações</button>
             <button type="reset" value="Limpar">Limpar</button>
-            <!-- </form> -->
+        </form>
 
     </div>
 </body>
