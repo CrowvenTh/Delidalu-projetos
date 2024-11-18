@@ -13,7 +13,7 @@ create table if not exists cliente (
 	senha varchar(255));
 
 create table if not exists estoque (
-    id int not null primary key auto_increment,
+    idproduto int not null primary key auto_increment,
     imagem varchar(500),
     nome varchar(50), 
     quantidade int, 
@@ -27,7 +27,7 @@ insert into estoque values
 
 create table if not exists clientepedido (id int not null primary key auto_increment, idcliente int not null, idestoque int not null, quantidadepedido int, totalpedido double, datapedido date,
 foreign key (idcliente) references cliente(id),
-foreign key (idestoque) references estoque(id));
+foreign key (idestoque) references estoque(idproduto));
 
 select id, idcliente, idestoque, quantidadepedido, totalpedido, date_format(datapedido, '%d/%m/%y') as datapedido from clientepedido;
 
@@ -41,7 +41,7 @@ select * from clientepedido;
 select cp.id as ID, c.nome as Cliente, c.endereco as Endereço, e.nome as Produto, cp.quantidadepedido as Quantidade
 , cp.totalpedido as Total, cp.datapedido as Data_Pedido FROM clientepedido as cp
 INNER JOIN cliente as c on cp.idcliente = c.id
-INNER JOIN estoque as e on cp.idestoque = e.id;
+INNER JOIN estoque as e on cp.idestoque = e.idproduto;
 
 
 -- TRIGGERS --
