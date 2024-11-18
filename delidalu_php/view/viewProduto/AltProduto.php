@@ -26,7 +26,7 @@
 
         <h4>Alteração de Produtos</h4>
 
-        <form action="ControleEstoque.php?ACAO=alterarProduto" method="POST">
+        <form method="POST" action="../../controler/ControleEstoque.php?ACAO=alterarProduto">
             <input type="hidden" name="idproduto" value="<?php echo $produto->getIdproduto(); ?>">
 
             <label for="imagem">Imagem:</label>

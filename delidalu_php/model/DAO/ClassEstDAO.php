@@ -51,6 +51,7 @@ class ClassEstDAO
 
             $produto->setIdproduto($produtoAssoc['idproduto']);
             $produto->setImagem($produtoAssoc['imagem']);
+            $produto->setNome($produtoAssoc['nome']);
             $produto->setQuantidade($produtoAssoc['quantidade']);
             $produto->setPreco($produtoAssoc['preco']);
 
@@ -60,17 +61,17 @@ class ClassEstDAO
         }
     }
 
-    public function alterarProduto(ClassEstoque $alterarProduto)
+    public function alterarProduto(ClassEstoque $produto)
     {
         try {
             $pdo = Conexao::getInstance();
             $sql = "UPDATE estoque SET imagem=?, nome=?, quantidade=?, preco=? where idproduto=?";
             $stmt = $pdo->prepare($sql);
-            $stmt->bindValue(1, $alterarProduto->getImagem());
-            $stmt->bindValue(2, $alterarProduto->getNome());
-            $stmt->bindValue(3, $alterarProduto->getQuantidade());
-            $stmt->bindValue(4, $alterarProduto->getPreco());
-            $stmt->bindValue(5, $alterarProduto->getIdproduto());
+            $stmt->bindValue(1, $produto->getImagem());
+            $stmt->bindValue(2, $produto->getNome());
+            $stmt->bindValue(3, $produto->getQuantidade());
+            $stmt->bindValue(4, $produto->getPreco());
+            $stmt->bindValue(5, $produto->getIdproduto());
             $stmt->execute();
 
             return $stmt->rowCount();

@@ -35,12 +35,13 @@ switch ($acao) {
         break;
 
     case 'alterarProduto':
-        $alterarProduto = $ClassEstDAO->alterarProduto($produto);
+        $produto = $ClassEstDAO->alterarProduto($produto);
 
         if ($produto == 1) { //varivael == 1 - referencia do professor 
             header('Location:../index.php?&MSG= Produto alterado com sucesso!');
+            header('Location:../view/viewProduto/Produto.php?&MSG= Produto alterado com sucesso!');
         } else {
-            header('Location:../index.php?&MSG= Não foi possível alterar o produto!');
+            header('Location:../view/viewProduto/Produto.php?&MSG= Não foi possível alterar o produto!');
         }
-
+        break;
 }
