@@ -19,11 +19,25 @@ if(!isset($_SESSION['id_usuario'])){
 <header>
         <nav>
             <ul>
-                <li><a href="../../index.php">Home</a></li>
-                <li><a href="../viewProduto/Produto.php">Produtos</a></li>
-                <li><a href="Login.php">Login</a></li>
-                <li><a href="CadCliente.php">Cadastro</a></li>
-                <li><a href="Perfil.php">Meu Perfil</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="view/viewProduto/Produto.php">Produtos</a></li>
+                <?php
+
+    if (!isset($_SESSION['nome'])){
+
+                ?>
+                <li><a href="view/viewCliente/Login.php">Login</a></li>
+                <li><a href="view/viewCliente/CadCliente.php">Cadastro</a></li>
+                <?php
+    }else {
+
+    
+
+                ?>
+                <li><a href="view/viewCliente/Perfil.php">Meu Perfil</a></li>
+                <?php
+    }
+                ?>
             </ul>
         </nav>
     </header>

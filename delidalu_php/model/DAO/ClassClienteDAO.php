@@ -177,15 +177,16 @@ class ClassClienteDAO {
         }
     }
 
-    public function listarpedido(){
+    public function listarpedido($nomecliente){
         try{
+
 
             $pdo = Conexao::getInstance();
             $sql = "SELECT cp.id AS ID, c.nome AS Cliente, c.endereco AS Endereço, e.nome AS Produto, cp.quantidadepedido AS Quantidade, cp.totalpedido AS Total, cp.datapedido AS Data_Pedido FROM clientepedido AS cp
             INNER JOIN cliente AS c ON cp.idcliente = c.id
-            INNER JOIN estoque AS e ON cp.idestoque = e.id";
+            INNER JOIN estoque AS e ON cp.idestoque = e.id where c.nome = ?";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute();
+            $stmt->execute([$nomecliente]);
             $logins = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $logins;
         } catch (PDOException $exc) {
