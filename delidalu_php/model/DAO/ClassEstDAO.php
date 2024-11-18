@@ -42,7 +42,7 @@ class ClassEstDAO
         try {
             $produto = new ClassEstoque();
             $pdo = Conexao::getInstance();
-            $sql = "SELECT idproduto imagem, nome,quantidade, preco WHERE idproduto = :idproduto LIMIT 1";
+            $sql = "SELECT idproduto, imagem, nome, quantidade, preco WHERE idproduto = :idproduto LIMIT 1";
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(':idproduto', $idproduto);
 

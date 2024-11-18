@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <!-- <a href="../index.php" class="login">Voltar</a> -->
     <a href="Produto.php" class="login">Voltar</a>
     <div class="form">
 
@@ -19,6 +18,11 @@
 
         if (isset($_GET['idproduto'])) {
             $idproduto = $_GET['idproduto'];
+            $imagem = $_POST['imagem'];
+            $nome = $_POST['nome'];
+            $quantidade = $_POST['quantidade'];
+            $preco = $_POST['preco'];
+
             $ClassEstDAO = new ClassEstDAO();
             $produto = $ClassEstDAO->buscarProduto($idproduto);
         }
@@ -45,7 +49,7 @@
             </p>
             <button type="submit" value="Registrar">Confirmar alterações</button>
             <button type="reset" value="Limpar">Limpar</button>
-        <!-- </form> -->
+            <!-- </form> -->
 
     </div>
 </body>

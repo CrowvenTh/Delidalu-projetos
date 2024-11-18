@@ -41,7 +41,7 @@ select * from clientepedido;
 select cp.id as ID, c.nome as Cliente, c.endereco as Endereço, e.nome as Produto, cp.quantidadepedido as Quantidade
 , cp.totalpedido as Total, cp.datapedido as Data_Pedido FROM clientepedido as cp
 INNER JOIN cliente as c on cp.idcliente = c.id
-INNER JOIN estoque as e on cp.idestoque = e.id;
+INNER JOIN estoque as e on cp.idestoque = e.idproduto;
 
 
 -- TRIGGERS --
