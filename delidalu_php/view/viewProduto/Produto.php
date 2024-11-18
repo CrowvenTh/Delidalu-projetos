@@ -41,17 +41,17 @@ $pr = $ClassEstDAO->listarProduto();
                 <div class="item">
                     <img class="imgProduto" src="../design_&_layout/logotipo/adicionar-icon.png">
                     <button class="adicionarButton"><a href="../viewProduto/CadProduto.php">Adicionar</a></button>
-                    
+
                 </div>
                 <?php
                 foreach ($pr as $pr) {
                     echo "<div class='item'>";
-                    echo "<img class='imgProduto' src=" .$pr['imagem']." alt='img'>";
-                    echo "<h3>" . $pr['nome'] . "</h3>"; 
+                    echo "<img class='imgProduto' src=" . $pr['imagem'] . " alt='img'>";
+                    echo "<h3>" . $pr['nome'] . "</h3>";
                     echo "<p> R$" . $pr['preco'] . "</p>";
                     // echo "<button class='adicionarButton'><a href='../viewProduto/CadProduto.php?id=" . $pr['id'] . "'>Adicionar</a></button>";
                     echo "<button class='alterarButton'><a href='../viewProduto/AltProduto.php?idproduto=" . $pr['idproduto'] . "'>Alterar</a></button>";
-                    echo "<button class='excluirButton'><a href='../viewProduto/DelProduto.php?idproduto=" . $pr['idproduto'] . "'>Excluir</a></button>";
+                    echo "<button class='excluirButton  name='excluir' id='excluir' value='excluir'><a href='../../controler/ControleEstoque.php?ACAO=excluirProduto&idproduto=" . $pr['idproduto'] . "'onclick='return checkDelete()'>Excluir</a></button>";
                     echo "</div>";
                 }
                 ?>

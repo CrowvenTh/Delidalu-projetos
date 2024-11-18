@@ -38,10 +38,22 @@ switch ($acao) {
         $produto = $ClassEstDAO->alterarProduto($produto);
 
         if ($produto == 1) { //varivael == 1 - referencia do professor 
-            header('Location:../index.php?&MSG= Produto alterado com sucesso!');
             header('Location:../view/viewProduto/Produto.php?&MSG= Produto alterado com sucesso!');
         } else {
             header('Location:../view/viewProduto/Produto.php?&MSG= Não foi possível alterar o produto!');
+        }
+        break;
+        
+    case "excluirProduto":
+        if(isset($_GET['idproduto'])){
+            $idproduto = $_GET['idproduto'];
+            $ClassEstDAO = new ClassEstDAO();
+            $pr = $ClassEstDAO->excluirproduto($idproduto);
+            if($pr == TRUE){
+                header('Location:../view/viewProduto/Produto.php?&MSG= Produto excluído com sucesso!');
+            } else {
+                header('Location:../view/viewProduto/Produto.php?&MSG= Não foi possível excluir o produto!');
+            }
         }
         break;
 }
