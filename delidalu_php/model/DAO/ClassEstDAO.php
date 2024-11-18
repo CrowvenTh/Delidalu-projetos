@@ -79,5 +79,17 @@ class ClassEstDAO
             echo $exc->getMessage();
         }
     }
-
+    public function excluirproduto($idproduto)
+    {
+        try {
+            $pdo = Conexao::getInstance();
+            $sql = "DELETE FROM estoque WHERE idproduto = :idproduto";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindValue(':idproduto', $idproduto);
+            $stmt->execute();
+            return TRUE;
+        } catch (PDOException $exc) {
+            echo $exc->getMessage();        
+    }
+}
 }
