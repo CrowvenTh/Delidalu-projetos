@@ -10,7 +10,6 @@
 
 <body>
   
-    <a href="login.php" class="login">Login</a>
     <div class="form">
         <h4>Formulário de Listagem de Pedido</h4>
 

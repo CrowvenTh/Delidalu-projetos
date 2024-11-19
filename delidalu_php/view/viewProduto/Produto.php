@@ -61,6 +61,7 @@ $pr = $ClassEstDAO->listarProduto();
                 foreach ($pr as $pr) {
                     echo "<div class='item'>";
                     echo "<img class='imgProduto' src=" . $pr['imagem'] . " alt='img'>";
+                    echo "<h3>" . $pr['idproduto'] . "</h3>";
                     echo "<h3>" . $pr['nome'] . "</h3>";
                     echo "<p> R$" . $pr['preco'] . "</p>";
                     // echo "<button class='adicionarButton'><a href='../viewProduto/CadProduto.php?id=" . $pr['id'] . "'>Adicionar</a></button>";
