@@ -54,6 +54,11 @@ if(!isset($_SESSION['id_usuario'])){
                 <a href="ExcluirCliente.php?idex=<?php echo $_SESSION['id_usuario']; ?>">Excluir conta</a>
                 <br>
                 <a href="CadCliente.php">Cadastrar nova conta</a>
+                <br>
+                <a href="CadPedido.php">Fazer um pedido</a>
+                <br>
+                <a href="ListarPedidos.php">Meus Pedidos</a>
+
 
             </div>
         </section>    
