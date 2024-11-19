@@ -9,8 +9,33 @@
 </head>
 
 <body>
-  
-    <a href="login.php" class="login">Login</a>
+<header>
+        <nav>
+            <ul>
+                <li><a href="../../index.php">Home</a></li>
+                <li><a href="../viewProduto/Produto.php">Produtos</a></li>
+                <?php
+
+    if (!isset($_SESSION['nome'])){
+
+                ?>
+                <li><a href="Login.php">Login</a></li>
+                <li><a href="CadCliente.php">Cadastro</a></li>
+                <?php
+    }else {
+
+    
+
+                ?>
+                <li><a href="Perfil.php">Meu Perfil</a></li>
+                <li><a href="logout.php">Logout</a></li>
+                <?php
+    }
+                ?>
+            </ul>
+        </nav>
+    </header>
+    
     <div class="form">
         <h4>Formulário de Listagem de Pedido</h4>
 
