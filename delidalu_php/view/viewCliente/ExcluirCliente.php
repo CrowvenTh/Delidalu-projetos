@@ -5,27 +5,77 @@
     <meta charset="UTF-8">
    
     <title>Excluir</title>
-    <link rel="stylesheet" href="../css/cadcliente.css">
+    <link rel="stylesheet" href="../css/excluircliente.css">
 </head>
 
 <body>
-    <a href="../viewCliente/Login.php" class="login">Login</a>
-    <div class="form">
-        <h4>Formulário de Exclusão de Cliente</h4>
-        <form method="post" action="../../controler/ControleCliente.php?ACAO=excluircliente">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.php">Home</a></li>
+                <li><a href="../viewProduto/Produto.php">Produtos</a></li>
+                <li><a href="Login.php">Login</a></li>
+                <li><a href="CadCliente.php">Cadastro</a></li>
+                <li><a href="Perfil.php">Meu Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <p> 
-                Digite o seu ID para exclusão:
-                <input type="text" name="excluirid" maxlength="40" placeholder="Digite o seu ID" />
-            </p>
-            
-            <div>
-                <button type="submit" value="Registrar">Excluir</button>
-                <button type="reset" value="Limpar">Limpar</button>
+    <main>
+        <section>
+            <div class="form">
+                <?php
+                    require '../../model/ClassCliente.php';
+                    require '../../model/DAO/ClassClienteDAO.php';
+                    $id = @$_GET['idex'];
+                    $novoCliente = new ClassCliente();
+                    $clienteDAO = new ClassClienteDAO();
+                    $novoCliente = $clienteDAO->buscarCliente($id);
+                ?>
+                <h4>Formulário de Exclusão de Cliente</h4>
+                <form method="post" action="../../controler/ControleCliente.php?ACAO=excluircliente">
+
+                    <p> 
+                        Tem certeza que deseja excluir sua conta?
+                        <input type="hidden" name="excluirid" maxlength="40" placeholder="Digite o seu ID" value="<?php echo $novoCliente->getId(); ?>"/>
+                    </p>
+                    
+                    <div>
+                        <button type="submit" value="Registrar">Excluir Conta</button>
+                    </div>
+                </form>
             </div>
-        </form>
+         </section>    
+    </main>
 
-    </div>
+    <footer>
+        <div class="footer-content">
+            <ul class="autores">
+                <h3>Autores</h3>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/CrowvenTh">Thiago</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/akirar0n">Yago</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/Yago-LDT">Roney</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/Bryanjvo">Bryan</a></li>
+            </ul>
+            <ul>
+                <h3>Contato</h3>
+                <li>(61) 91234-5678</li>
+                <li><a style="color: white;" href="mailto:#">corvustech@gmail.com</a></li>
+            </ul>
+            <ul>
+                <h3>Endereço</h3>
+                <li>CEP: 123.456-789</li>
+                <li>QS alguma coisa</li>
+                <li>Rua tal, Samambaia Sul - Brasília/DF</li>
+            </ul>
+            <ul>
+                <h3>Redes Sociais</h3>
+                <li>Instagram</li>
+                <li>WhatsApp</li>
+                <li><a href="https://github.com/CrowvenTh/Delidalu-projetos/tree/main">Github</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>

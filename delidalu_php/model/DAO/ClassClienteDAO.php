@@ -23,6 +23,7 @@ class ClassClienteDAO {
                 
                 $_SESSION['id_usuario'] = $resultado['id'];
                 $_SESSION['nome'] = $resultado['nome'];
+                $_SESSION['cpf'] = $resultado['cpf'];
                 $_SESSION['endereco'] = $resultado['endereco'];
                 $_SESSION['telefone'] = $resultado['telefone'];
                 $_SESSION['email'] = $resultado['email'];

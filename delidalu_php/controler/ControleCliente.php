@@ -73,6 +73,7 @@ switch($acao) {
         $excluir = $ClassClienteDAO->excluircliente($processar);
 
         if($excluir >= 1){
+            session_destroy();
             header('Location:../index.php?&MSG= Exclusão realizada com sucesso!');
         } else {
             header('Location:../view/viewCliente/ExcluirCliente.php?&MSG= Não foi possivel realizar a exclusão!');
