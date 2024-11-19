@@ -9,33 +9,8 @@
 </head>
 
 <body>
-<header>
-        <nav>
-            <ul>
-                <li><a href="../../index.php">Home</a></li>
-                <li><a href="../viewProduto/Produto.php">Produtos</a></li>
-                <?php
-
-    if (!isset($_SESSION['nome'])){
-
-                ?>
-                <li><a href="Login.php">Login</a></li>
-                <li><a href="CadCliente.php">Cadastro</a></li>
-                <?php
-    }else {
-
-    
-
-                ?>
-                <li><a href="Perfil.php">Meu Perfil</a></li>
-                <li><a href="logout.php">Logout</a></li>
-                <?php
-    }
-                ?>
-            </ul>
-        </nav>
-    </header>
-    
+  
+    <a href="login.php" class="login">Login</a>
     <div class="form">
         <h4>Formulário de Listagem de Pedido</h4>
 
@@ -66,7 +41,6 @@
 
   echo "<table class='exemplo'>";
   echo "<tr>";
-  echo "<td><p> ID </p></td>";
   echo "<td><p> Cliente </p></td>";
   echo "<td><p> Endereço </p></td>";
   echo "<td><p> Produto </p></td>";
@@ -80,7 +54,6 @@
       echo "<div>";
     	echo "<table>";
       echo "<tr>";
-      echo "<td><p>" . $us['ID'] . "</p></td>";
       echo "<td><p>" . $us['Cliente'] . "</p></td>";
       echo "<td><p>" . $us['Endereço'] . "</p></td>";
       echo "<td><p>" . $us['Produto'] . "</p></td>";

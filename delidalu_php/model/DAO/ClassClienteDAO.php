@@ -120,7 +120,7 @@ class ClassClienteDAO {
     }
 
     public function buscarCliente($idCliente)
-    {
+      {
         try {
             $cliente = new ClassCliente();
             $pdo = Conexao::getInstance();
@@ -146,7 +146,7 @@ class ClassClienteDAO {
     }
 
     public function listarClientes()
-    {
+     {
         try {
             $pdo = Conexao::getInstance();
             $sql = "SELECT * FROM cliente order by (nome) asc";
@@ -165,7 +165,7 @@ class ClassClienteDAO {
 
 
             $pdo = Conexao::getInstance();
-            $sql = "INSERT INTO clientepedido (idcliente, idestoque, quantidadepedido, datapedido) values (?,?,?,curdate())";
+            $sql = "INSERT INTO clientepedido (idcliente, idestoque, quantidadepedido, totalpedido, datapedido) values (?,?,?,null,curdate())";
             $stmt = $pdo->prepare($sql);
 
             $stmt->bindValue(1, $cadastrarPedido->getIdcliente());
@@ -183,9 +183,9 @@ class ClassClienteDAO {
 
 
             $pdo = Conexao::getInstance();
-            $sql = "SELECT cp.id AS ID, c.nome AS Cliente, c.endereco AS Endereço, e.nome AS Produto, cp.quantidadepedido AS Quantidade, cp.totalpedido AS Total, cp.datapedido AS Data_Pedido FROM clientepedido AS cp
+            $sql = "SELECT c.nome AS Cliente, c.endereco AS Endereço, e.nome AS Produto, cp.quantidadepedido AS Quantidade, cp.totalpedido AS Total, cp.datapedido AS Data_Pedido FROM clientepedido AS cp
             INNER JOIN cliente AS c ON cp.idcliente = c.id
-            INNER JOIN estoque AS e ON cp.idestoque = e.id where c.nome = ?";
+            INNER JOIN estoque AS e ON cp.idestoque = e.idproduto where c.nome = ?";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$nomecliente]);
             $logins = $stmt->fetchAll(PDO::FETCH_ASSOC);
