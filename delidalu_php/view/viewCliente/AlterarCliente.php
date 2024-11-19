@@ -19,8 +19,8 @@ if(!isset($_SESSION['id_usuario'])){
 <header>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="view/viewProduto/Produto.php">Produtos</a></li>
+                <li><a href="../../index.php">Home</a></li>
+                <li><a href="../viewProduto/Produto.php">Produtos</a></li>
                 <?php
 
     if (!isset($_SESSION['nome'])){
@@ -34,7 +34,7 @@ if(!isset($_SESSION['id_usuario'])){
     
 
                 ?>
-                <li><a href="view/viewCliente/Perfil.php">Meu Perfil</a></li>
+                <li><a href="Perfil.php">Meu Perfil</a></li>
                 <?php
     }
                 ?>
@@ -57,8 +57,7 @@ if(!isset($_SESSION['id_usuario'])){
                             <form method="post" action="../../controler/ControleCliente.php?ACAO=alterarcliente">
 
                                 <p> 
-                                    Digite o seu ID atual:
-                                    <input type="text" name="novoid" maxlength="40" placeholder="Digite o seu ID" value="<?php echo $novoCliente->getId(); ?>" required/>
+                                    <input type="hidden" name="novoid" maxlength="40" placeholder="Digite o seu ID" value="<?php echo $novoCliente->getId(); ?>" required/>
                                 </p>
                                 
                                 <p> 

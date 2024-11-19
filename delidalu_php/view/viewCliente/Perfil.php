@@ -39,6 +39,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <?php
             echo "<p>Seu ID: " . $_SESSION['id_usuario'];"</p>";
             echo "<p>Seu nome: " . $_SESSION['nome'];"</p>";
+            echo "<p>Seu CPF: " . $_SESSION['cpf'];"</p>";
             echo "<p>Seu endereço: " . $_SESSION['endereco'];"</p>";
             echo "<p>Seu e-mail: " . $_SESSION['email'];"</p>";
             echo "<p>Seu telefone: " . $_SESSION['telefone'];"</p>";
@@ -50,7 +51,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <br>
                 <a href="AlterarCliente.php?idex=<?php echo $_SESSION['id_usuario']; ?>">Alterar Conta</a>
                 <br>
-                <a href="ExcluirCliente.php">Excluir conta</a>
+                <a href="ExcluirCliente.php?idex=<?php echo $_SESSION['id_usuario']; ?>">Excluir conta</a>
                 <br>
                 <a href="CadCliente.php">Cadastrar nova conta</a>
 
@@ -62,10 +63,10 @@ if(!isset($_SESSION['id_usuario'])){
         <div class="footer-content">
             <ul class="autores">
                 <h3>Autores</h3>
-                <li> <img class="autoresImg" src="design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/CrowvenTh">Thiago</a></li>
-                <li> <img class="autoresImg" src="design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/akirar0n">Yago</a></li>
-                <li> <img class="autoresImg" src="design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/Yago-LDT">Roney</a></li>
-                <li> <img class="autoresImg" src="design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/Bryanjvo">Bryan</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/CrowvenTh">Thiago</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/akirar0n">Yago</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/Yago-LDT">Roney</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/Bryanjvo">Bryan</a></li>
             </ul>
             <ul>
                 <h3>Contato</h3>
