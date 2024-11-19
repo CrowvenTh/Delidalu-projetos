@@ -25,7 +25,7 @@ insert into estoque values
 (null,"https://files.qatarliving.com/post/2022/07/28/CHUROS-MIA-CAFE-Qatar-Living%20(1).jpg","Churros",60,7.55);
 
 
-create table if not exists clientepedido (id int not null primary key auto_increment, idcliente int not null, idestoque int not null, quantidadepedido int, totalpedido double, datapedido date,
+create table if not exists clientepedido (idcliente int not null, idestoque int not null, quantidadepedido int, totalpedido double, datapedido date,
 foreign key (idcliente) references cliente(id),
 foreign key (idestoque) references estoque(idproduto));
 
@@ -75,12 +75,14 @@ DECLARE preco_calc double;
 
 select preco into preco_calc
 from estoque
-where id = new.idestoque;
+where idproduto = new.idestoque;
  
 set new.totalpedido = (preco_calc * new.quantidadepedido);
 END //
 
 DELIMITER ;
+
+
 
 DELIMITER //
 create trigger calc_total2
@@ -91,9 +93,18 @@ DECLARE preco_calc double;
 
 select preco into preco_calc
 from estoque
-where id = new.idestoque;
+where idproduto = new.idestoque;
  
 set new.totalpedido = (preco_calc * new.quantidadepedido);
 END //
 
 DELIMITER ;
+select * from estoque;
+
+select * from clientepedido;
+
+insert into clientepedido (idcliente, idestoque, quantidadepedido, datapedido) values (1, 2, 3, curdate());
+
+
+
+
