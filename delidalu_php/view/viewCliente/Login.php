@@ -38,7 +38,7 @@ session_start();
         </nav>
     </header>
     <div class="form">
-        <h4>Formulário de Login</h4>
+        <h4>Login</h4>
         <form method="post" action="../../controler/ControleCliente.php?ACAO=verificarLogin">
             <p> 
                 Email:
